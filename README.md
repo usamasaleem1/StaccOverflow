@@ -17,5 +17,5 @@
 1. Open your desired MySQL server (e.g. XAMMP, WAMP, etc)
 2. create a database called <code>soen341</code>
 3. Copy the <i>.example.env</i> file (located in the <u>Backend</u> folder) and rename it to <i>.env</i>
-4. Enter your own server values for username, password, port, etc in the <i>.env<i> file
+4. Enter your own server values for username, password, port, etc in the <i>.env</i> file
 5. Run the nodeJS server if it is not already running (using the commands in setp 5 and 6 above)
