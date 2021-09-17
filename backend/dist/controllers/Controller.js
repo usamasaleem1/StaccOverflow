@@ -2,11 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Constroller = void 0;
 class Constroller {
-    constructor() {
-        if (target.new == this) {
-            throw new Error("Cannot instantiate Abstract class Controller");
-        }
-    }
+    constructor() { }
 }
 exports.Constroller = Constroller;
 //# sourceMappingURL=Controller.js.map

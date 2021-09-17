@@ -7,16 +7,18 @@ require("reflect-metadata");
 const express_1 = __importDefault(require("express"));
 const typeorm_1 = require("typeorm");
 const User_1 = require("./models/User");
+const dotenv_1 = __importDefault(require("dotenv"));
 async function main() {
-    const PORT = 7000;
+    dotenv_1.default.config();
+    const PORT = process.env.APP_PORT;
     const app = (0, express_1.default)();
     const connection = await (0, typeorm_1.createConnection)({
         type: "mysql",
-        host: "localhost",
-        port: 3306,
-        username: "root",
-        password: "",
-        database: "soen341",
+        host: process.env.DB_HOST,
+        port: Number(process.env.DB_PORT || 3306),
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
         synchronize: true,
         entities: [User_1.User],
     });
