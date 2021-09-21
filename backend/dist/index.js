@@ -8,6 +8,7 @@ const express_1 = __importDefault(require("express"));
 const typeorm_1 = require("typeorm");
 const User_1 = require("./models/User");
 const dotenv_1 = __importDefault(require("dotenv"));
+const Route_1 = require("./router/Route");
 async function main() {
     dotenv_1.default.config();
     const PORT = process.env.APP_PORT;
@@ -22,7 +23,19 @@ async function main() {
         synchronize: true,
         entities: [User_1.User],
     });
-    app.get("/", (req, res) => res.send("Hello this is the index API route!"));
+    require("./router/web");
+    for (const route of Route_1.Route.routes) {
+        switch (route.method) {
+            case "GET":
+                app.get(route.url, (req, res) => route.controller.prototype[route.funcName](req, res));
+                break;
+            case "POST":
+                app.post(route.url, (req, res) => route.controller.prototype[route.funcName](req, res));
+                break;
+            default:
+                throw new Error("Unsupported route method");
+        }
+    }
     app.listen(PORT, () => console.log(`Server is listening to http://localhost:${PORT}/`));
 }
 main().catch((e) => console.error(e));

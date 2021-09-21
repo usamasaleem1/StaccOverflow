@@ -3,6 +3,8 @@ import express from "express";
 import { createConnection, Connection } from "typeorm";
 import { User } from "./models/User";
 import dotenv from "dotenv";
+import { TestController } from "./controllers/TestController";
+import { Route } from "./router/Route";
 
 async function main() {
 	dotenv.config();
@@ -23,7 +25,25 @@ async function main() {
 	});
 
 	// All API Routes should be defined here
-	app.get("/", (req, res) => res.send("Hello this is the index API route!"));
+	require("./router/web");
+	for (const route of Route.routes) {
+		switch (route.method) {
+			case "GET":
+				app.get(route.url, (req, res) =>
+					// @ts-ignore
+					route.controller.prototype[route.funcName](req, res)
+				);
+				break;
+			case "POST":
+				app.post(route.url, (req, res) =>
+					// @ts-ignore
+					route.controller.prototype[route.funcName](req, res)
+				);
+				break;
+			default:
+				throw new Error("Unsupported route method");
+		}
+	}
 
 	// Start the server
 	app.listen(PORT, () =>
