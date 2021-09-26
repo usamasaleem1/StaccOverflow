@@ -1,5 +1,13 @@
 # SOEN341
 
+## Objective 
+Develop a simplified version of Stack Overflow website where different people can post their questions and get answer to their queries. Users can vote on answers and depending on votes best answer is selected.
+
+## Core Features
+1. Asking and answering questions
+2. Voting on answer
+3. Accepting the best answer
+
 ## How to setup to project (Backend)
 
 1. Clone the repo
