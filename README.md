@@ -22,10 +22,10 @@
 5. Run the nodeJS server if it is not already running (using the commands in step 7 above)
 
 ## Technologies used
-Typescript (both frontend and backend)
-NestJS (backend)
-MySQL with type-orm (backend)
-React (frontend)
+* Typescript (both frontend and backend)
+* NestJS (backend)
+* MySQL with type-orm (backend)
+* React (frontend)
 
 ## Team Members
 
