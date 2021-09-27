@@ -39,7 +39,7 @@ Develop a simplified version of Stack Overflow website where different people ca
 
 1. Uzair Ali (uzairali245)
 2. Mehdi Chitsaz
-3. Usama Saleem
+3. Usama Saleem (usamasaleem1)
 4. Yacin Jouiad
 5. Shadi Jiha (jshad0 and shadijiha accounts)
 6. Alexandre Hakim
