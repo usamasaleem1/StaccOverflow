@@ -1,5 +1,13 @@
 # SOEN341
 
+## Objective 
+Develop a simplified version of Stack Overflow website where different people can post their questions and get answer to their queries. Users can vote on answers and depending on votes best answer is selected.
+
+## Core Features
+1. Asking and answering questions
+2. Voting on answer
+3. Accepting the best answer
+
 ## How to setup to project (Backend)
 
 1. Clone the repo
@@ -21,12 +29,18 @@
 4. Enter your own server values for username, password, port, etc in the <i>.env</i> file
 5. Run the nodeJS server if it is not already running (using the commands in step 7 above)
 
+## Technologies used
+* Typescript (both frontend and backend)
+* NestJS (backend)
+* MySQL with type-orm (backend)
+* React (frontend)
+
 ## Team Members
 
-1. Uzair Ali
+1. Uzair Ali (uzairali245)
 2. Mehdi Chitsaz
-3. Usama Saleem
+3. Usama Saleem (usamasaleem1)
 4. Yacin Jouiad
-5. Shadi Jiha
+5. Shadi Jiha (jshad0 and shadijiha accounts)
 6. Alexandre Hakim
 7. Victor Manuel Guerra
