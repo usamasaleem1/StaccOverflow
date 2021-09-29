@@ -46,4 +46,4 @@ Develop a simplified version of Stack Overflow website where different people ca
 4. Yacin Jouiad (Evowox)
 5. Shadi Jiha (jshad0 and shadijiha accounts)
 6. Alexandre Hakim (alexhakim)
-7. Victor Manuel Guerra
+7. Victor Manuel Guerra (vimaguelo)
