@@ -41,7 +41,7 @@ Develop a simplified version of Stack Overflow website where different people ca
 ## Team Members
 
 1. Uzair Ali (uzairali245)
-2. Mehdi Chitsaz
+2. Mehdi Chitsaz (mehdichitsaz)
 3. Usama Saleem (usamasaleem1)
 4. Yacin Jouiad
 5. Shadi Jiha (jshad0 and shadijiha accounts)
