@@ -13,7 +13,7 @@ class Test extends Migration
      */
     public function up()
     {
-        Schema::table("test", function (Blueprint $table) {
+        Schema::create("test", function (Blueprint $table) {
             $table->text('This_is_test');
         });
     }
