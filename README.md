@@ -14,15 +14,16 @@ Develop a simplified version of Stack Overflow website where different people ca
 ## How to setup to project (Backend)
 
 1. Clone the repo
-2. Open a CMD in the folder called <b>Backend</b> inside the folder you just clone the repo in
-3. Type <code>npm --version</code>. You should get a number printed. If not you need to download
+2. Insure that you have PHP installed on your PC by running the command <code>php -v</code> in the terminal. You should get a number printed in the console. If not, google "How to install php"
+3. Download and install composer from <a href="https://getcomposer.org/download/">here</a>
+4. Open a CMD in the folder called <b>Backend</b> inside the folder you just clone the repo in
+5. Type <code>npm --version</code>. You should get a number printed. If not you need to download
    NodeJS from here https://nodejs.org/en/download/
-4. Now that you have NPM installed. Type <code>npm i -g @nestjs/cli</code> in the CMD you opened in step 2 and wait until its done.
-5. Now Type <code>npm install</code> in the CMD you opened in step 2.
-6. <b>IMPORTANT</b>: Follow the steps below to setup the connection with the database before you continue.
-7. Now type <code>npm run start:dev</code> in the same CMD.
-8. Now you are ready! Every time you modify a file the server will automatically restart itself to apply the changes
-   Keep an eye on the CMDs because any error will appear there.
+6. Now that you have composer and npm installed. Open a terminal in the <b>Backend</b> folder. And run the command <code>composer install</code>
+7. Now follow the steps below <i>Setting up the connection with a MySQL database</i>
+8. After you have followed those steps, run <code>php artisan migrate</code>
+9. Once finished your app is ready to go. Just run <code>php artisan serve</code>
+10. Navigate to http://localhost:8000 and you should see the welcome page
 
 ## Setting up the connection with a MySQL database:
 
@@ -33,10 +34,9 @@ Develop a simplified version of Stack Overflow website where different people ca
 5. Run the nodeJS server if it is not already running (using the commands in step 7 above)
 
 ## Technologies used
-* Typescript (both frontend and backend)
-* NestJS (backend)
-* MySQL with type-orm (backend)
-* React (frontend)
+* Laravel (PHP)
+* MySQL
+* Blade template language
 
 ## Team Members
 
