@@ -15,7 +15,7 @@ class AuthController extends Controller
     {
         $email    = $request->get("email");
         $password = $request->get("password");
-        $name     = $request->get("username");
+        $name     = $request->get("name");
 
         // Validate the input
         $validator = Validator::make($request->all(), [
@@ -37,9 +37,9 @@ class AuthController extends Controller
         $user->name     = $name;
         $user->save();
 
-        Auth::setUser($user);
+        Auth::login($user);
 
-        return view("index");
+        return redirect("index");
     }
 
 }
