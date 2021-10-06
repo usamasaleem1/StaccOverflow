@@ -30,6 +30,4 @@ Route::get('/signin', function () {
 Route::post("/signin", [AuthController::class, "signin"]);
 
 
-Route::get('/test', function () {
-    return view("test");
-});
+Route::post("/logout", [AuthController::class, "logout"])->name("logout");
