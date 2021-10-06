@@ -41,7 +41,7 @@
                 <nav class="site-navigation position-relative text-right" role="navigation">
 
                     <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                        <li class="active"><a href="home"><span>Welcome</span></a></li>
+                        <li class="active"><a href="{{ url("")  }}"><span>Welcome</span></a></li>
                         <li class="has-children">
                             <a href="about.html"><span>View Questions</span></a>
                             <ul class="dropdown arrow-top">
@@ -59,10 +59,16 @@
                         </li>
                         <li>
                             @auth
-                                <a href="logout"><span>Logout</span></a>
+                                <a style="cursor: pointer"
+                                   onclick="document.getElementById('logout_form').submit()"><span>Logout</span></a>
                             @else
                                 <a href="{{route("signin")}}"><span>Login</span></a>
                             @endauth
+
+                            {{--  This form is userd for logout --}}
+                            <form id="logout_form" class="d-none" method="POST" action="{{ route("logout")  }}">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </nav>

@@ -64,4 +64,11 @@ class AuthController extends Controller
         // Otherwise invalid password
         return redirect("signin")->withErrors(["Invalid password"]);
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        return redirect("");
+    }
 }
