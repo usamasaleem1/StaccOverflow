@@ -39,7 +39,29 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect("index");
+        return redirect("");
     }
 
+    public function signin(Request $request)
+    {
+        error_log("Heelo");
+        $email    = $request->get("name");
+        $password = $request->get("password");
+
+        // Get user from DB
+        $user = User::where("name", $email)->first();
+        if (!$user) {
+            return redirect("signin")->withErrors(["email", "This email does not exist"]);
+        }
+
+        // Password matches the user's
+        if (Hash::check($password, $user->password)) {
+            Auth::login($user);
+
+            return redirect("");
+        }
+
+        // Otherwise invalid password
+        return redirect("signin")->withErrors(["password", "Invalid password"]);
+    }
 }
