@@ -28,3 +28,8 @@ Route::get('/signin', function () {
     return view("signin");
 })->name("signin");
 Route::post("/signin", [AuthController::class, "signin"]);
+
+
+Route::get('/test', function () {
+    return view("test");
+});
