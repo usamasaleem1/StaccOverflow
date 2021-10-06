@@ -28,3 +28,8 @@ Route::get('/signin', function () {
     return view("signin");
 })->name("signin");
 Route::post("/signin", [AuthController::class, "signin"]);
+
+Route::get('/home', function () {
+    return view("home");
+})->name("home");
+Route::post("/home", [AuthController::class, "home"]);
