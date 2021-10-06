@@ -1,38 +1,28 @@
-
-<!DOCTYPE html>
 <html>
+
 <head>
-<link href="{{ asset('public/css/signin.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="css/signin.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Sign in</title>
 </head>
+
 <body>
-
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
-    <h2 class="active"> Sign In </h2>
-    <h2 class="inactive underlineHover">Sign Up </h2>
-
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+  <div class="main">
+    <p class="sign" Align="center">Sign In</p>
+    <p class="title" Align="center">It's Not a Bug, It's a Feature</p>
+    <img src="https://static.thenounproject.com/png/538846-200.png" alt="User Icon" width="50" class="center"/>
+    <form class="form1">
+      <input class="un " type="text" Align="center" placeholder="Username">
+      <input class="pass" type="password" Align="center" placeholder="Password">
+      <a class="submitSignIn" >Sign in</a>
+      <a class="submitSignUp" a href="register">Sign up</a>
+      <p class="forgot" Align="center"><a href="#">Forgot Password?</p>
+            
+                
     </div>
-
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
-    </div>
-
-  </div>
-</div>
-
+     
 </body>
-</html>
 
-@endsection
+</html>
