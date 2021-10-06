@@ -1,9 +1,8 @@
-@extends("layouts.main")
-@section("content")
+
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="signin.css">
+<link href="{{ asset('public/css/signin.css') }}" rel="stylesheet">
 </head>
 <body>
 
