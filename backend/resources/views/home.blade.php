@@ -17,7 +17,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Website Menu #3</title>
+    <title>Stacc Overflow</title>
   </head>
   <body>
 
