@@ -1,33 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-<!-- Navbar-->
-<header class="header">
-    <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Transparent Nav</a>
-            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-            
-            <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Gallery</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Portfolio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
-                </ul>
-            </div>
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Stacc Overflow</title>
+  </head>
+  <body>
+
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
         </div>
-    </nav>
-</header>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <header class="site-navbar" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-11 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="home" class="text-white mb-0">Stacc Overflow</a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active"><a href="home"><span>Welcome</span></a></li>
+                <li class="has-children">
+                  <a href="about.html"><span>View Questions</span></a>
+                  <ul class="dropdown arrow-top">
+                        <li><a href="#">Latest</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">Most Controversial</a></li>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="postQuestion"><span>Post a Question</span></a></li>
+                <li><a href="settings"><span>Account Settings</span></a></li>
+                <li><a href="logout"><span>Logout</span></a></li>
+              </ul>
+            </nav>
+          </div>
 
 
-<!-- For demo purpose -->
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+        </div>
+      </div>
+      
+    </header>
+
+    <!-- For demo purpose -->
 <div class="container">
     <div class="pt-5 text-white">
         <header class="py-5 mt-5">
-            <h1 class="display-4">Transparent Navbar</h1>
-            <p class="lead mb-0">Using Bootstrap 4 and Javascript, create a transparent navbar which changes its style on scroll.</p>
-            <p class="lead mb-0">Snippet by
-                <a href="https://bootstrapious.com" class="text-white">
-                    <u>Bootstrapious</u></a>
+            <h1 class="display-4">Stacc Overflow</h1>
+            <p class="lead mb-0">Testing this page functionality.</p>
+            <p class="lead mb-0">Made by
+                <a href="https://github.com/usamasaleem1/SOEN341/" class="text-white">
+                    <u>Team at SOEN 341</u></a>
             </p>
         </header>
         <div class="py-5">
@@ -40,3 +91,15 @@
         </div>
     </div>
 </div>
+
+    
+  
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
