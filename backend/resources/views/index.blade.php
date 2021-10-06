@@ -21,7 +21,7 @@
             @auth
                 Hello {{ \Illuminate\Support\Facades\Auth::user()->name }}
             @else
-                All content should go here
+                All content should go here test
             @endauth
         </div>
     </div>
