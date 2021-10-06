@@ -51,7 +51,7 @@ class AuthController extends Controller
         // Get user from DB
         $user = User::where("name", $email)->first();
         if (!$user) {
-            return redirect("signin")->withErrors(["email", "This email does not exist"]);
+            return redirect("signin")->withErrors(["This email does not exist"]);
         }
 
         // Password matches the user's
@@ -62,6 +62,6 @@ class AuthController extends Controller
         }
 
         // Otherwise invalid password
-        return redirect("signin")->withErrors(["password", "Invalid password"]);
+        return redirect("signin")->withErrors(["Invalid password"]);
     }
 }
