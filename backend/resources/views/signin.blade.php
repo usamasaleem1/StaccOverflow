@@ -1,5 +1,11 @@
 @extends("layouts.withoutHeader")
+@section("title")
+Sign in
+@endsection
 
+@section("styles")
+<link rel="stylesheet" href="css/signin.css">
+@endsection
 @section("content")
     <div class="main">
         <p class="sign" Align="center">Sign In</p>
