@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>@yield("title")</title>
+
+    @yield("styles")
 </head>
 <body>
 <div class="site-mobile-menu">

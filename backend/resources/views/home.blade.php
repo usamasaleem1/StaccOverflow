@@ -4,6 +4,21 @@
     Stacc Overflow
 @endsection
 
+@section("styles")
+    <style>
+        code {
+            display: block;
+            white-space: pre;
+            background-color: #1a202ccc;
+            max-width: 50%;
+            border-radius: 7px;
+            padding: 10px;
+            margin-top: 5px;
+            color: white;
+        }
+    </style>
+@endsection
+
 @section("content")
     <!-- For demo purpose -->
     <div class="container">
