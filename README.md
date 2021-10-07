@@ -40,10 +40,10 @@ Develop a simplified version of Stack Overflow website where different people ca
 
 ## Team Members
 
-1. Uzair Ali (uzairali245)
-2. Mehdi Chitsaz (mehdichitsaz)
-3. Usama Saleem (usamasaleem1)
-4. Yacin Jouiad (Evowox)
-5. Shadi Jiha (jshad0 and shadijiha accounts)
+1. Shadi Jiha (shadijiha) <b>Leader</b>
+2. Uzair Ali (uzairali245)
+3. Mehdi Chitsaz (mehdichitsaz)
+4. Usama Saleem (usamasaleem1)
+5. Yacin Jouiad (Evowox)
 6. Alexandre Hakim (alexhakim)
 7. Victor Manuel Guerra (vimaguelo)
