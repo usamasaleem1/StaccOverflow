@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ["questions" => \App\Models\Question::all()]);
 });
 
 // Auth routes
@@ -26,8 +26,13 @@ Route::post("/register", [AuthController::class, "register"]);
 
 Route::get('/signin', function () {
     return view("signin");
-})->name("signin");
+})->name("login");
 Route::post("/signin", [AuthController::class, "signin"]);
 
-
 Route::post("/logout", [AuthController::class, "logout"])->name("logout");
+
+// Question route
+Route::get('/post', function () {
+    return view("post");
+})->middleware("auth")->name("post");
+Route::post("/post", [\App\Http\Controllers\QuestionController::class, "create"])->name("post_post");

@@ -51,7 +51,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="postQuestion"><span>Post a Question</span></a></li>
+                        <li><a href="{{ route("post")  }}"><span>Post a Question</span></a></li>
                         <li>
                             @auth
                                 <a href="settings"><span>Account Settings</span></a>
@@ -62,7 +62,7 @@
                                 <a style="cursor: pointer"
                                    onclick="document.getElementById('logout_form').submit()"><span>Logout</span></a>
                             @else
-                                <a href="{{route("signin")}}"><span>Login</span></a>
+                                <a href="{{route("login")}}"><span>Login</span></a>
                             @endauth
 
                             {{--  This form is userd for logout --}}
