@@ -18,22 +18,6 @@
                 </p>
             </header>
 
-            <div class="card-container">
-              <div class="card">
-                <div class="img">
-                </div>
-                    <h2 style="margin: 25px";>Question Title</h2>
-                    <p style="margin-left: 30px";>Here's what I mean, for example with Grover's search algorithm we are interested in 
-                        isolating a single state from a superposition of multiple states, from the video it seems to me we are interested 
-                        in isolating multiple states from a superposition of multiple states. Since qubits collapse only to a single state 
-                        after measurement, How would measurement here yield multiple states or is there a work around? </p>
-
-            </div>
-
-
-
-
-
             <div class="py-5">
                 <p class="lead">Lorem ipsum dolor sit amet, <strong class="font-weight-bold">consectetur
                         adipisicing </strong>elit. Explicabo consectetur odio voluptatum facere animi temporibus,
@@ -49,6 +33,45 @@
                     culpa
                     qui officia deserunt mollit anim id est laborum.</p>
             </div>
+            
+
+            <div class="card-container">
+              <div class="card">
+                <div class="img">
+                </div>
+                    <h2 style="margin: 25px";>Question Title</h2>
+                    <p style="margin-left: 30px";>Here's what I mean, for example with Grover's search algorithm we are interested in 
+                        isolating a single state from a superposition of multiple states, from the video it seems to me we are interested 
+                        in isolating multiple states from a superposition of multiple states. Since qubits collapse only to a single state 
+                        after measurement, How would measurement here yield multiple states or is there a work around? </p>
+
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                  <div class="img">
+                  </div>
+                      <h2 style="margin: 25px";>Question Title</h2>
+                      <p style="margin-left: 30px";>Here's what I mean, for example with Grover's search algorithm we are interested in 
+                          isolating a single state from a superposition of multiple states, from the video it seems to me we are interested 
+                          in isolating multiple states from a superposition of multiple states. Since qubits collapse only to a single state 
+                          after measurement, How would measurement here yield multiple states or is there a work around? </p>
+  
+              </div>
+
+              <div class="card-container">
+                <div class="card">
+                  <div class="img">
+                  </div>
+                      <h2 style="margin: 25px";>Question Title</h2>
+                      <p style="margin-left: 30px";>Here's what I mean, for example with Grover's search algorithm we are interested in 
+                          isolating a single state from a superposition of multiple states, from the video it seems to me we are interested 
+                          in isolating multiple states from a superposition of multiple states. Since qubits collapse only to a single state 
+                          after measurement, How would measurement here yield multiple states or is there a work around? </p>
+  
+              </div>
+
+
 
 
 
