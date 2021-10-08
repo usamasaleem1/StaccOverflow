@@ -17,6 +17,7 @@
             color: white;
         }
     </style>
+    <script src="{{asset("js/codeFormatters.js")}}"></script>
 @endsection
 
 @section("content")
@@ -48,7 +49,7 @@
                             by <strong>{{ $question->user->name  }}</strong>
                             &nbsp; {{ $question->created_at->diffForHumans()  }}
                         </p>
-                        <p style="margin-left: 30px">
+                        <p style="margin-left: 30px" class="question_content">
                             {!! $question->content !!}
                         </p>
 
@@ -57,6 +58,20 @@
             @endforeach
         </div>
     </div>
+
+
+    <script>
+        const codeDOMs = document.querySelectorAll("p[class=question_content] code");
+
+        for (const code of codeDOMs) {
+            let content = code.innerText;
+
+            code.innerHTML = JSFormatter.format(content);
+        }
+
+
+    </script>
+
 
 @endsection
 
