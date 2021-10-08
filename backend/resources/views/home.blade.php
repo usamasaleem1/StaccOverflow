@@ -17,6 +17,7 @@
             color: white;
         }
     </style>
+    <script src="{{asset("js/codeFormatters.js")}}"></script>
 @endsection
 
 @section("content")
@@ -47,8 +48,14 @@
                         <p style="margin-left: 30px">
                             by <strong>{{ $question->user->name  }}</strong>
                             &nbsp; {{ $question->created_at->diffForHumans()  }}
+                            <br/>
+                            Tags:
+                            @foreach($question->tags as $tag)
+                                <span>{{ $tag->name }}</span>
+                            @endforeach
                         </p>
-                        <p style="margin-left: 30px">
+                        <p style="margin-left: 30px" class="question_content"
+                           data-lang="{{count($question->tags) > 0 ? $question->tags[0]->name : ""}}">
                             {!! $question->content !!}
                         </p>
 
@@ -58,6 +65,28 @@
         </div>
     </div>
 
+
+    <script>
+        const codeDOMs = document.querySelectorAll("p[class=question_content] code");
+
+        for (const code of codeDOMs) {
+            let content = code.innerText;
+
+            // Get the correct language formatter
+            let attribute = code.parentNode.getAttribute("data-lang").toLowerCase();
+
+            switch (attribute) {
+                case "javascript":
+                    content = JSFormatter.format(content);
+                    break;
+                case "c++":
+                    content = CppFormatter.format(content);
+                    break;
+            }
+
+            code.innerHTML = content;
+        }
+    </script>
 @endsection
 
 
