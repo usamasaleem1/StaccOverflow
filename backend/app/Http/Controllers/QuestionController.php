@@ -20,7 +20,7 @@ class QuestionController extends Controller
         $question->title   = $title;
         $question->content = $content;
         $question->save();
-        
+
 
         if ($label_id && $label_id != "-1") {
             $question->tags()->attach([$label_id]);

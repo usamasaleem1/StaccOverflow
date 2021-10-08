@@ -75,15 +75,11 @@
             // Get the correct language formatter
             let attribute = code.parentNode.getAttribute("data-lang").toLowerCase();
 
-            switch (attribute) {
-                case "javascript":
-                    content = JSFormatter.format(content);
-                    break;
-                case "c++":
-                    content = CppFormatter.format(content);
-                    break;
+            for (const formatter in LANG_TO_FORMATTER) {
+                if (attribute === formatter) {
+                    content = LANG_TO_FORMATTER[formatter].format(content);
+                }
             }
-
             code.innerHTML = content;
         }
     </script>
