@@ -14,7 +14,7 @@
                 Tags:
                 <select name="label_id">
                     <option value="-1">None</option>
-                    @foreach(\App\Models\Tag::all() as $tag)
+                    @foreach(\Illuminate\Support\Facades\DB::table("tags")->orderBy('name', 'asc')->get() as $tag)
                         <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                     @endforeach
                 </select>
