@@ -10,6 +10,15 @@
                 <br/>
                 <textarea name="content" placeholder="Description"></textarea>
 
+                <br/>
+                Tags:
+                <select name="label_id">
+                    <option value="-1">None</option>
+                    @foreach(\Illuminate\Support\Facades\DB::table("tags")->orderBy('name', 'asc')->get() as $tag)
+                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                    @endforeach
+                </select>
+
                 <button type="submit">Post</button>
             </form>
         </div>
