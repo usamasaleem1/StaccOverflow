@@ -10,7 +10,7 @@
             display: block;
             white-space: pre;
             background-color: #1a202ccc;
-            max-width: 50%;
+            max-width: 60%;
             border-radius: 7px;
             padding: 10px;
             margin-top: 5px;

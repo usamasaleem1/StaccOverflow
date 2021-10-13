@@ -14,18 +14,18 @@
                 @csrf
                 {{-- Title box --}}
                 <div class="none" style="margin:0 auto;">
-                    <input class="search" name="title" type="text" id="search" placeholder="Title"/>
+                    <input class="search" name="title" type="text" id="search" placeholder="Title" required/>
                 </div>
                 <br>
                 <div class="none">
                     {{-- Question box --}}
-                    <textarea name="content" class="search2" type="text" id="search" placeholder='Explain your question here.
+                    <textarea required name="content" class="search2" type="text" id="search" placeholder='Explain your question here.
 
                 Protip: add your code as <code> YOUR CODE HERE </code> to format correctly.'></textarea>
                 </div>
                 <br/>
                 <div class="dropdownTag">
-                    <select name="label_id" class="dropdownTag-select">
+                    <select name="label_id" class="dropdownTag-select" required>
                         <option value="-1">Select Tag</option>
                         @foreach(\Illuminate\Support\Facades\DB::table("tags")->orderBy('name', 'asc')->get() as $tag)
                             <option value="{{ $tag->id }}">{{ $tag->name }}</option>
