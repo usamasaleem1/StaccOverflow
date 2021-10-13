@@ -45,7 +45,7 @@
                     <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                         <li class="active"><a href="{{ url("")  }}"><span>Welcome</span></a></li>
                         <li class="has-children">
-                            <a href="about.html"><span>View Questions</span></a>
+                            <a href="/"><span>View Questions</span></a>
                             <ul class="dropdown arrow-top">
                                 <li><a href="#">Latest</a></li>
                                 <li><a href="#">Most Popular</a></li>

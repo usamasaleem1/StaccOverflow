@@ -34,7 +34,7 @@ input {
 	box-sizing: content-box;
 	font-size: 13px;
 	vertical-align: top;
-    word-wrap: normal;  
+  word-wrap: normal;  
 }
 
 .wrapper {
@@ -53,35 +53,36 @@ input {
   }
 
 .search {
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
 	padding: 0 30px;
 	font-size: 18px;
 	width: 40%;
 	max-width: 600px;
 	height: 50px;
-    background-color: lightblue;
+  background-color: lightblue;
 	border: 1px solid darken(white, 10%);
-    border-color: rgba(0, 0, 255, 0);
+  border-color: rgba(0, 0, 255, 0);
 	border-radius: 150px;
-    word-wrap: normal;  
-    box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
+  word-wrap: normal;  
+  box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
 }
 
 .search2 {
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
-	padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+	padding: 30px;
 	font-size: 18px;
 	width: 80%;
 	max-width: 800px;
-	height: 300px;
-    background-color: lightblue;
-    border-color: rgba(0, 0, 255, 0);
+  background-color: lightblue;
+  border-color: rgba(0, 0, 255, 0);
 	border-radius: 30px;
-    box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
 }
 
 
