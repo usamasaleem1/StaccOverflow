@@ -1,0 +1,23 @@
+@import url("https://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css");
+body {
+  color: #222;
+  background: #eee;
+}
+.up-down-vote {
+  position: absolute;
+  height: 200px;
+}
+.up-vote .ion-arrow-up-a {
+  position: absolute;
+  top: 60;
+  left: 0;
+  font-size: 35px;
+  color: rgb(0, 119, 255);
+}
+.down-vote .ion-arrow-down-a {
+  position: absolute;
+  bottom: 60;
+  left: 0;
+  font-size: 35px;
+  color: rgb(214, 47, 83);
+}
