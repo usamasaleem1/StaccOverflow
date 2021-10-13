@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Question;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,9 +10,9 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
-    public function index()
+    public function index(QuestionController $controller)
     {
-        return redirect("")->with(["questions" => Question::all()]);
+        return redirect("")->with(["questions" => $controller->all()]);
     }
 
     public function register(Request $request)
@@ -44,7 +43,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return $this->index();
+        return $this->index(new QuestionController());
     }
 
     public function signin(Request $request)
@@ -62,7 +61,7 @@ class AuthController extends Controller
         if (Hash::check($password, $user->password)) {
             Auth::login($user);
 
-            return $this->index();
+            return $this->index(new QuestionController());
         }
 
         // Otherwise invalid password
@@ -73,6 +72,6 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return $this->index();
+        return $this->index(new QuestionController());
     }
 }
