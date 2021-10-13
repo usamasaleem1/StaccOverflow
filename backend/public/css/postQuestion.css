@@ -1,0 +1,309 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+
+h1 {
+	text-shadow: 1px 1px 10px rgba(black, .5);
+}
+
+h1, h2 {
+	text-align: center;
+	color: white;
+	font-size: 2.5em;
+	line-height: 1.3em;
+	font-weight: 300;
+    word-wrap: normal;  
+}
+
+h2 {
+	margin-top: 100px;
+	font-size: 1.3em;
+	font-style: italic;
+	font-weight: 100;
+    word-wrap: normal;  
+}
+
+.body {
+	width: 100%;
+	height: 250px;
+	box-sizing: border-box;
+    word-wrap: normal;  
+}
+
+
+input {
+	box-sizing: content-box;
+	font-size: 13px;
+	vertical-align: top;
+    word-wrap: normal;  
+}
+
+.wrapper {
+	text-align:left;
+	position: relative;
+	height: 80px;
+	font-size: 0;
+	top: 50%;
+	transform: translateY(-50%);
+    word-wrap:break-word;  
+}
+
+::-webkit-input-placeholder { 
+    white-space:pre-line;  
+    position:center;
+  }
+
+.search {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+	padding: 0 30px;
+	font-size: 18px;
+	width: 40%;
+	max-width: 600px;
+	height: 50px;
+    background-color: lightblue;
+	border: 1px solid darken(white, 10%);
+    border-color: rgba(0, 0, 255, 0);
+	border-radius: 150px;
+    word-wrap: normal;  
+    box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
+}
+
+.search2 {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+	padding: 20px 30px;
+	font-size: 18px;
+	width: 80%;
+	max-width: 800px;
+	height: 300px;
+    background-color: lightblue;
+    border-color: rgba(0, 0, 255, 0);
+	border-radius: 30px;
+    box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.submit {
+	cursor: pointer;
+	border: none;
+	background: url('') no-repeat center center, #1E1E20;
+	border-radius: 0 20px 20px 0;
+	padding: 15px 25px;
+	display: inline-block;
+	width: 0px;
+	height: 80px;
+    word-wrap: normal;  
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+
+/* dropdownTag STUFF */
+  .dropdownTag {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    width: 150px;
+    background: #f2f2f2;
+    border: 1px solid;
+    border-color: white #f7f7f7 whitesmoke;
+    border-radius: 990px;
+    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdownTag:before, .dropdownTag:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 4px dashed;
+    border-color: #888888 transparent;
+    pointer-events: none;
+  }
+  
+  .dropdownTag:before {
+    border-bottom-style: solid;
+    border-top: none;
+  }
+  
+  .dropdownTag:after {
+    margin-top: 7px;
+    border-top-style: solid;
+    border-bottom: none;
+  }
+  
+  .dropdownTag-select {
+    position: relative;
+    width: 130%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 28px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #62717a;
+    text-shadow: 0 1px white;
+    background: #f2f2f2; /* Fallback for IE 8 */
+    background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  
+  .dropdownTag-select:focus {
+    z-index: 3;
+    width: 100%;
+    color: #394349;
+    outline: 0px solid #49aff2;
+    outline: 0px solid -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  
+  .dropdownTag-select > option {
+    margin: 3px;
+    padding: 6px 8px;
+    text-shadow: none;
+    background: #f2f2f2;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Fix for IE 8 putting the arrows behind the select element. */
+  
+  .lt-ie9 .dropdownTag {
+    z-index: 1;
+  }
+  
+  .lt-ie9 .dropdownTag-select {
+    z-index: -1;
+  }
+  
+  .lt-ie9 .dropdownTag-select:focus {
+    z-index: 3;
+  }
+  
+  /* Dirty fix for Firefox adding padding where it shouldn't. */
+  
+  @-moz-document url-prefix() {
+    .dropdownTag-select {
+      padding-left: 6px;
+    }
+  }
+  
+  .dropdownTag-dark {
+    background: #444;
+    border-color: #2b2b2b #222222 rgb(51, 51, 51);
+    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdownTag-dark:before {
+    border-bottom-color: #aaa;
+  }
+  
+  .dropdownTag-dark:after {
+    border-top-color: #aaa;
+  }
+  
+  .dropdownTag-dark .dropdownTag-select {
+    color: #aaa;
+    text-shadow: 0 1px black;
+    background: #444;  /* Fallback for IE 8 */
+  }
+  
+  .dropdownTag-dark .dropdownTag-select:focus {
+    color: #ccc;
+  }
+  
+  .dropdownTag-dark .dropdownTag-select > option {
+    background: #444;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  }
+  
+
+  /* BUTTON CSS */
+button {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 40px;
+    background: #017BFE;
+    border: 2px solid #8b8b8b00;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+    color: white;
+    background: #0068d6;
+}
+button:active {
+    letter-spacing: 2px;
+}
+button:after {
+    content: "SUBMIT";
+}
+.onclic {
+    width: 40px;
+    border-color: #bbb;
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: #0068d6;
+    animation: rotating 2s 0.25s linear infinite;
+}
+.onclic:after {
+    content: "";
+}
+.onclic:hover {
+    color: #0068d6;
+    background: white;
+}
+.validate {
+    font-size: 13px;
+    color: white;
+    background: #0068d6;
+}
+.validate:after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+   }
+    to {
+        transform: rotate(360deg);
+   }
+}
