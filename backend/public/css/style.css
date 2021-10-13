@@ -17,7 +17,9 @@ body {
 }
 
 .card {
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
   background-color: lightblue;
   margin-left: 100px;
   margin-right: 100px;
