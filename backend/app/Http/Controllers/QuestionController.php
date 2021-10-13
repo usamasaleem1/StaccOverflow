@@ -27,7 +27,7 @@ class QuestionController extends Controller
         }
 
 
-        return $controller->index();
+        return $controller->index(new QuestionController());
     }
 
     public function all()
