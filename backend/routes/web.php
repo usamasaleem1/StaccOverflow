@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', ["questions" => \App\Models\Question::all()]);
+    return view('home', ["questions" => (new \App\Http\Controllers\QuestionController())->all()]);
 });
 
 // Auth routes

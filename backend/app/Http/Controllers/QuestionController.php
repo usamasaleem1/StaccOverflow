@@ -29,4 +29,9 @@ class QuestionController extends Controller
 
         return $controller->index();
     }
+
+    public function all()
+    {
+        return Question::all()->sortBy("created_at", SORT_REGULAR, true);
+    }
 }
