@@ -36,3 +36,8 @@ Route::get('/post', function () {
     return view("post");
 })->middleware("auth")->name("post");
 Route::post("/post", [\App\Http\Controllers\QuestionController::class, "create"])->name("post_post");
+
+Route::prefix('search')->group(function () {
+    Route::get('/tag/{tag}', [\App\Http\Controllers\SearchController::class, "searchByTag"]);
+    Route::get('/author/{author}', [\App\Http\Controllers\SearchController::class, "searchByAuthor"]);
+});

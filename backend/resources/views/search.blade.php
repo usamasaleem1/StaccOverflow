@@ -1,9 +1,9 @@
 @extends("layouts.withHeader")
 
 @section("title")
-    Stacc Overflow
+    Search results
 @endsection
-<link rel="stylesheet" href="{{ asset("css/voting.css")  }}">
+<link rel="stylesheet" href="css/voting.css">
 @section("styles")
     <style>
         code {
@@ -24,17 +24,14 @@
     <div class="container">
         <div class="pt-5 text-white">
             <header class="py-5 mt-5">
-                <h1 class="display-4">Stacc Overflow</h1>
-                <p class="lead mb-0">Testing this page functionality.</p>
-                <p class="lead mb-0">Made by
-                    <a href="https://github.com/usamasaleem1/SOEN341/" class="text-white" target="_blank">
-                        <u>Team at SOEN 341</u></a>
-                </p>
+                <h1 class="display-4">Search results for {{ $query  }}</h1>
             </header>
 
             <div class="py-1">
                 <p style="margin-top: -25px; margin-bottom: 25px" ; class="lead">Sorted by latest</p>
             </div>
+            <br/>
+            <br/>
 
             @foreach($questions as $question)
                 <div class="up-down-vote" style="margin-left: 69.69%; margin-top: -55px">
@@ -49,7 +46,6 @@
                     <div class="up-down-vote-value-wrapper"></div>
                 </div>
 
-
                 <div class="card-container">
                     <div class="card">
                         <div class="img">
@@ -59,12 +55,7 @@
                         </h2>
                         {{-- by admin --}}
                         <p style="text-align: right; margin-right: 30px; margin-bottom: 0px; margin-top: -30px; color: rgba(115, 181, 192, 1.0)">
-                            by <strong>
-                                <a
-                                    href="{{ url("search/author/" . $question->user_id) }}">
-                                    {{ $question->user->name  }}
-                                </a>
-                            </strong>
+                            by <strong>{{ $question->user->name  }}</strong>
                             &nbsp; {{ $question->created_at->diffForHumans()  }}
                             <br/>
                         </p>
@@ -72,7 +63,7 @@
                         <p style="margin-left: 30px; margin-top: 10px; color: rgb(1,123,254)">
                             Tags:
                             @foreach($question->tags as $tag)
-                                <a href="{{ url("search/tag/" . $tag->id) }}">{{ $tag->name }}</a>
+                                <span>{{ $tag->name }}</span>
                             @endforeach
                         </p>
                         <p style="margin-left: 7%; margin-right: 7%; margin-bottom: 4%; color: #000000"
@@ -83,6 +74,9 @@
 
                     </div>
                 </div>
+
+                <br/>
+                <br/>
             @endforeach
         </div>
     </div>
