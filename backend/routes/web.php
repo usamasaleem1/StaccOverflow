@@ -41,3 +41,6 @@ Route::prefix('search')->group(function () {
     Route::get('/tag/{tag}', [\App\Http\Controllers\SearchController::class, "searchByTag"]);
     Route::get('/author/{author}', [\App\Http\Controllers\SearchController::class, "searchByAuthor"]);
 });
+
+// Question voting
+Route::post("questionvote", [\App\Http\Controllers\QuestionController::class, "vote"])->name("question_vote");

@@ -1,9 +1,9 @@
 @extends("layouts.withoutHeader")
 @section("title")
-Sign up
+    Sign up
 @endsection
 @section("styles")
-<link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="{{asset("css/signup.css")}}">
 @endsection
 @section("content")
     <div class="main">

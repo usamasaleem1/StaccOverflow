@@ -18,6 +18,16 @@
         }
     </style>
     <script src="{{asset("js/codeFormatters.js")}}"></script>
+    <script>
+        // ALL constants here
+        const CSRF_TOKEN = "{{  csrf_token() }}";
+        const QUESTION_VOTING_ROUTE = "{{ route("question_vote")  }}";
+        const SIGN_IN_ROUTE = "{{ route("login")  }}";
+        const UP = {{\App\Models\QuestionVote::UPVOTE}};
+        const DOWN = {{\App\Models\QuestionVote::DOWNVOTE}};
+        const IS_LOGGED = {{\Illuminate\Support\Facades\Auth::check() == true ? "true" : "false"}};
+    </script>
+    <script src="{{ asset("js/questionVotingLogic.js")  }}"></script>
 @endsection
 
 @section("content")
@@ -37,14 +47,37 @@
             </div>
 
             @foreach($questions as $question)
+                {{-- The voting stuff is here --}}
+                @php
+                    $votes = $question->questionVotes;
+                    $userVote = $votes->firstWhere("user_id", Auth::id())
+                @endphp
                 <div class="up-down-vote" style="margin-left: 69.69%; margin-top: -55px">
-                    <a class="up-vote" href="">
-                        <i class="ion-arrow-up-a"></i>
-                        {{-- <i class="ion-plus">34</i> --}}
+                    <a class="up-vote">
+
+                        @if ($userVote != null && $userVote->type == \App\Models\QuestionVote::UPVOTE)
+                            <i class="ion-arrow-up-a"
+                               onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::NONE}})"></i>
+
+                        @else
+                            <i class="ion-arrow-up-a gray"
+                               onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::UPVOTE}})"></i>
+                        @endif
+
+                        <i class="ion-plus">{{ $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::UPVOTE;})->count()  }}</i>
                     </a>
-                    <a class="down-vote" href="">
-                        <i class="ion-arrow-down-a"></i>
-                        {{-- <i class="ion-minus">6</i> --}}
+
+                    <a class="down-vote">
+
+                        @if ($userVote != null && $userVote->type == \App\Models\QuestionVote::DOWNVOTE)
+                            <i class="ion-arrow-down-a"
+                               onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::NONE}})"></i>
+                        @else
+                            <i class="ion-arrow-down-a gray"
+                               onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::DOWNVOTE}})"></i>
+                        @endif
+
+                        <i class="ion-minus">{{ $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::DOWNVOTE;})->count()  }}</i>
                     </a>
                     <div class="up-down-vote-value-wrapper"></div>
                 </div>
