@@ -52,7 +52,7 @@
                     $votes = $question->questionVotes;
                     $userVote = $votes->firstWhere("user_id", Auth::id())
                 @endphp
-                <div class="up-down-vote" style="margin-left: 69.69%; margin-top: -55px">
+                <div class="up-down-vote" style="margin-left: 50px;margin-right: 30px;margin-top: -15px">
                     <a class="up-vote">
 
                         @if ($userVote != null && $userVote->type == \App\Models\QuestionVote::UPVOTE)
@@ -139,6 +139,3 @@
         }
     </script>
 @endsection
-
-
-
