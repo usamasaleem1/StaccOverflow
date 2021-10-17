@@ -29,3 +29,14 @@ body {
 .gray {
     filter: grayscale(100%);
 }
+
+.ion-plus {
+    margin-top: 92px;
+    margin-left: -13px;
+    color: black;
+}
+
+.ion-minus {
+    color: black;
+    margin-left: 8px;
+}
