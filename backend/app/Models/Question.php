@@ -23,4 +23,9 @@ class Question extends Model
     {
         return $this->hasMany(QuestionVote::class);
     }
+
+    public function questionComments()
+    {
+        return $this->hasMany(QuestionComment::class);
+    }
 }

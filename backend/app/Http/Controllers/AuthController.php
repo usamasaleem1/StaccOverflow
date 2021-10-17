@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * Class QuestionController
+ *
+ * @author  Shadi Jiha
+ * @date    17 Oct. 2021
+ * @package App\Http\Controllers
+ */
 class AuthController extends Controller
 {
     public function index(QuestionController $controller)

@@ -7,6 +7,13 @@ use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+/**
+ * Class QuestionController
+ *
+ * @author  Shadi Jiha
+ * @date    17 Oct. 2021
+ * @package App\Http\Controllers
+ */
 class SearchController extends Controller
 {
 
