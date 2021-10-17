@@ -3,12 +3,12 @@
 @section("content")
     <div class="container">
         <div class="pt-5 text-white">
-            <link rel="stylesheet" href="css/postQuestion.css">
+            <link rel="stylesheet" href="{{ asset("css/postQuestion.css")  }}">
             <br>
             <br>
             <br>
             <br>
-            <h1>Post a question</h1>
+            <h1 class="post">Post a question</h1>
             <br>
             <form method="POST" action="{{ route("post_post")  }}">
                 @csrf

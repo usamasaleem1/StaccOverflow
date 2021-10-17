@@ -37,6 +37,10 @@ Route::get('/post', function () {
 })->middleware("auth")->name("post");
 Route::post("/post", [\App\Http\Controllers\QuestionController::class, "create"])->name("post_post");
 
+Route::get('/view/{q}', [\App\Http\Controllers\QuestionController::class, "view"]);
+Route::post("/postcomment", [\App\Http\Controllers\QuestionController::class, "comment"])->name("post_comment")->middleware("auth");
+Route::post("/markbestanswer", [\App\Http\Controllers\QuestionController::class, "bestAsnwer"])->middleware("auth")->name("mark_best_answer");
+
 Route::prefix('search')->group(function () {
     Route::get('/tag/{tag}', [\App\Http\Controllers\SearchController::class, "searchByTag"]);
     Route::get('/author/{author}', [\App\Http\Controllers\SearchController::class, "searchByAuthor"]);
