@@ -10,7 +10,6 @@ before_install: cd backend
 before_script:
   - composer install
   - cp .env.example .env
-  - sudo mysql -e 'create database forge;'
   - composer self-update
   - php artisan key:generate
   - php artisan migrate
