@@ -68,7 +68,7 @@
                 <br>
                 <div class="none">
                     {{-- Question box --}}
-                    <textarea required name="content" class="search2" type="text" id="search" placeholder='Explain your question here.
+                    <textarea required name="content"  class="search3" type="text" id="search" placeholder='Explain your question here.
 
                 Protip: add your code as <code> YOUR CODE HERE </code> to format correctly.'></textarea>
                 </div>

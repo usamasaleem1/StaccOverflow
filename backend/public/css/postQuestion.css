@@ -70,6 +70,22 @@ input {
 .search2 {
     display: flex;
     flex-direction: column;
+    min-height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    font-size: 18px;
+    width: 80%;
+    max-width: 800px;
+    background-color: lightblue;
+    border-color: rgba(0, 0, 255, 0);
+    border-radius: 30px;
+    box-shadow: 0px 5px 21px 1px rgba(0, 0, 0, 0.1);
+}
+
+.search3 {
+    display: flex;
+    flex-direction: column;
     min-height: 170px;
     margin-right: auto;
     margin-left: auto;
