@@ -5,7 +5,9 @@ php:
 
 os: linux
 
-before_install: cd backend
+before_install: 
+  - cd backend
+  - mysql -e 'CREATE DATABASE backend;'
 
 before_script:
   - composer install
