@@ -5,6 +5,9 @@ php:
 
 os: linux
 
+services:
+  - mysql
+
 before_install: 
   - cd backend
   - mysql -e 'CREATE DATABASE backend;'
