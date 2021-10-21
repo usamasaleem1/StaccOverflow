@@ -59,7 +59,7 @@
             @include("components.questionCard", ["question" => $question])
 
             <br/>
-            <h1>{{ $question->questionComments->count()  }} Answers</h1>
+            <h4>{{ $question->questionComments->count()  }} Answers</h4>
             <br/>
 
             {{-- New comment form --}}
@@ -125,6 +125,3 @@
         }
     </script>
 @endsection
-
-
-
