@@ -1,16 +1,23 @@
 language: php
 
 php:
-  - 7.3
   - 7.4
 
 os: linux
 
+services:
+  - mysql
+
+before_install: 
+  - cd backend
+  - mysql -e 'CREATE DATABASE backend;'
+
 before_script:
   - composer install
   - cp .env.example .env
+  - composer self-update
   - php artisan key:generate
-  - php artisan jwt:secret
+  - php artisan migrate
 
 script:
   - vendor/bin/phpunit
