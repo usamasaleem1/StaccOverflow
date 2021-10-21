@@ -59,7 +59,7 @@
             @include("components.questionCard", ["question" => $question])
 
             <br/>
-            <h1>{{ $question->questionComments->count()  }} Answers</h1>
+            <h4>{{ $question->questionComments->count()  }} Answers</h4>
             <br/>
 
             {{-- New comment form --}}
@@ -68,7 +68,7 @@
                 <br>
                 <div class="none">
                     {{-- Question box --}}
-                    <textarea required name="content" class="search2" type="text" id="search" placeholder='Explain your question here.
+                    <textarea required name="content"  class="search3" type="text" id="search" placeholder='Explain your question here.
 
                 Protip: add your code as <code> YOUR CODE HERE </code> to format correctly.'></textarea>
                 </div>
@@ -125,6 +125,3 @@
         }
     </script>
 @endsection
-
-
-
