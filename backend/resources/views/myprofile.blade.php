@@ -17,7 +17,7 @@
         </span>
 
         <span class="profile-card-loc__txt">
-          Mikly Way Galaxy
+          Milky Way Galaxy
         </span>
       </div>
 
