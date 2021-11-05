@@ -61,10 +61,10 @@
               <svg class="icon"><use xlink:href="#icon-github"></use></svg>
           </span>
         </a>
-        
+
       </div>
 
-      <div class="profile-card-ctr">
+      <div class="profile-card-ctr" style="margin-top:-15px;">
         <button class="profile-card__button button--blue js-message-btn">Message</button>
         <button class="profile-card__button button--orange">Questions</button>
       </div>
