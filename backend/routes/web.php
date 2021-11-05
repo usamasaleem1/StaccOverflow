@@ -18,6 +18,13 @@ Route::get('/', function () {
     return view('home', ["questions" => (new \App\Http\Controllers\QuestionController())->all()]);
 });
 
+
+Route::get('/myprofile', function () {
+    return view("myprofile");
+})->name("myprofile");
+Route::post("/myprofile", [AuthController::class, "myprofile"]);
+
+
 // Auth routes
 Route::get('/register', function () {
     return view("register");
