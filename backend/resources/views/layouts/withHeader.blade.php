@@ -66,7 +66,7 @@
                         <li><a href="{{ route("post")  }}"><span>Post a Question</span></a></li>
                         <li>
                             @auth
-                                <a href="settings"><span>Account Settings</span></a>
+                                <a href="{{ route("myprofile")  }}"><span>Account Settings</span></a>
                             @endauth
                         </li>
                         <li>
