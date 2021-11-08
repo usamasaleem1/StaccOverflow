@@ -21,8 +21,7 @@ Route::get('/', function () {
 
 Route::get('/myprofile', function () {
     return view("myprofile");
-})->name("myprofile");
-Route::post("/myprofile", [AuthController::class, "myprofile"]);
+})->name("myprofile")->middleware("auth");
 
 
 // Auth routes
