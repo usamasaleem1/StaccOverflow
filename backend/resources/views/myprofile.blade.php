@@ -6,43 +6,43 @@
         <div class="profile-card js-profile-card">
             <div class="profile-card__img">
                 <img
-                    src="{{ Auth::user()->avatar }}"
+                    src="{{ $user->avatar }}"
                     alt="profile card">
             </div>
 
             <div class="profile-card__cnt js-profile-cnt">
-                <div class="profile-card__name">{{ Auth::user()->name  }}</div>
-                <div class="profile-card__txt">{{ Auth::user()->bio  }}</div>
+                <div class="profile-card__name">{{ $user->name  }}</div>
+                <div class="profile-card__txt">{{ $user->bio  }}</div>
                 <div class="profile-card-loc">
         <span class="profile-card-loc__icon">
           <svg class="icon"><use xlink:href="#icon-location"></use></svg>
         </span>
 
                     <span class="profile-card-loc__txt">
-            {{ Auth::user()->location == null ? 'Milky Way Galaxy' : Auth::user()->location  }}
+            {{ $user->getLocation()  }}
         </span>
                 </div>
 
                 <div class="profile-card-inf">
                     <div class="profile-card-inf__item">
-                        <div class="profile-card-inf__title">1598</div>
-                        <div class="profile-card-inf__txt">Followers</div>
+                        <div class="profile-card-inf__title">{{ $user->getTotalLikes() }}</div>
+                        <div class="profile-card-inf__txt">Likes</div>
                     </div>
 
                     <div class="profile-card-inf__item">
-                        <div class="profile-card-inf__title">65</div>
-                        <div class="profile-card-inf__txt">Following</div>
+                        <div class="profile-card-inf__title">{{ $user->getTotalDislikes() }}</div>
+                        <div class="profile-card-inf__txt">Dislikes</div>
                     </div>
 
                     <div class="profile-card-inf__item">
                         <div
-                            class="profile-card-inf__title">{{ \App\Models\Question::where("user_id", Auth::user()->id)->count()  }}</div>
+                            class="profile-card-inf__title">{{ \App\Models\Question::where("user_id", $user->id)->count()  }}</div>
                         <div class="profile-card-inf__txt">Questions</div>
                     </div>
 
                     <div class="profile-card-inf__item">
                         <div
-                            class="profile-card-inf__title">{{ \App\Models\QuestionComment::where("user_id", Auth::user()->id)->count()  }}</div>
+                            class="profile-card-inf__title">{{ \App\Models\QuestionComment::where("user_id", $user->id)->count()  }}</div>
                         <div class="profile-card-inf__txt">Answers</div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
           </span>
                 </a>
 
-                <a href="https://github.com/{{Auth::user()->name}}" class="profile-card-social__item github"
+                <a href="https://github.com/{{$user->name}}" class="profile-card-social__item github"
                    target="_blank">
           <span class="icon-font">
               <svg class="icon"><use xlink:href="#icon-github"></use></svg>
@@ -70,31 +70,11 @@
             </div>
 
             <div class="profile-card-ctr" style="margin-top:-15px;">
-                <button class="profile-card__button button--blue js-message-btn">Message</button>
-                <a href="{{ url("search/author/" . Auth::user()->id)  }}">
+                <a href="mailto:{{$user->email}}" class="profile-card__button button--blue js-message-btn">Message</a>
+                <a href="{{ url("search/author/" . $user->id)  }}">
                     <button class="profile-card__button button--orange">Questions</button>
                 </a>
             </div>
-        </div>
-
-        <div class="profile-card-message js-message">
-            <form class="profile-card-form">
-                <div class="profile-card-form__container">
-                    <textarea placeholder="Say something..."></textarea>
-                </div>
-
-                <div class="profile-card-form__bottom">
-                    <button class="profile-card__button button--blue js-message-close">
-                        Send
-                    </button>
-
-                    <button class="profile-card__button button--gray js-message-close">
-                        Cancel
-                    </button>
-                </div>
-            </form>
-
-            <div class="profile-card__overlay js-message-close"></div>
         </div>
 
     </div>
@@ -183,10 +163,10 @@
         var card = document.querySelector('.js-profile-card');
         var closeBtn = document.querySelectorAll('.js-message-close');
 
-        btn.addEventListener('click', function (e) {
+        /*btn.addEventListener('click', function (e) {
             e.preventDefault();
             card.classList.add('active');
-        });
+        });*/
 
         closeBtn.forEach(function (element, index) {
             console.log(element);

@@ -55,4 +55,46 @@ class User extends Authenticatable
     {
         return $this->hasMany(QuestionComment::class);
     }
+
+    public function getTotalLikes(): int
+    {
+        $questions = $this->questions;
+        $likes     = 0;
+
+        foreach ($questions as $question) {
+            $votes = $question->questionVotes;
+
+            foreach ($votes as $vote) {
+                if ($vote->type == QuestionVote::UPVOTE)
+                    $likes++;
+            }
+        }
+
+        return $likes;
+    }
+
+    public function getTotalDislikes()
+    {
+        $questions = $this->questions;
+        $dislikes  = 0;
+
+        foreach ($questions as $question) {
+            $votes = $question->questionVotes;
+
+            foreach ($votes as $vote) {
+                if ($vote->type == QuestionVote::DOWNVOTE)
+                    $dislikes++;
+            }
+        }
+
+        return $dislikes;
+    }
+
+    public function getLocation()
+    {
+        $str = $this->location == "127.0.0.1" ? "Milky Way Galaxy" : $this->location;
+
+
+        return $str;
+    }
 }

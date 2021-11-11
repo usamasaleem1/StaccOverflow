@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +20,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/myprofile', function () {
-    return view("myprofile");
-})->name("myprofile")->middleware("auth");
+Route::get('/profile/{id}', function (int $id, AuthController $controller) {
+    $user = User::where("id", $id)->first();
+    $controller->checkAvatarAndBio($user);
+    return view("myprofile", ["user" => $user]);
+})->name("profile");
 
 
 // Auth routes
