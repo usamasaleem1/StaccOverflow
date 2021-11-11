@@ -31,6 +31,15 @@ services:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - soen341
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - "8080:80"
 
   nginx:
     image: nginx:alpine
