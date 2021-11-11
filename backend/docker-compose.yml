@@ -31,13 +31,19 @@ services:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - soen341
+    ports:
+      - "3308:3306"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     restart: always
+    networks:
+      - soen341
+    depends_on:
+      - db
     environment:
       PMA_HOST: db
-      PMA_USER: root
-      PMA_PASSWORD: root
+      PMA_USER: default
+      PMA_PASSWORD: secure
     ports:
       - "8080:80"
 
