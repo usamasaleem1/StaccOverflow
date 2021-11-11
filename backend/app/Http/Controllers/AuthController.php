@@ -46,6 +46,8 @@ class AuthController extends Controller
         $user->email    = $email;
         $user->password = Hash::make($password);
         $user->name     = $name;
+        $user->avatar   = "https://avatars.dicebear.com/api/avataaars/$name.svg";
+        $user->bio      = "Hi 👋 my name is $name";
         $user->save();
 
         Auth::login($user);
@@ -66,6 +68,19 @@ class AuthController extends Controller
 
         // Password matches the user's
         if (Hash::check($password, $user->password)) {
+
+
+            // Backward compatibility
+            $name = $user->name;
+            if ($user->avatar == null) {
+                $user->avatar = "https://avatars.dicebear.com/api/avataaars/$name.svg";
+                $user->save();
+            }
+
+            if ($user->bio == null) {
+                $user->bio = "Hi 👋 my name is $name";
+                $user->save();
+            }
             Auth::login($user);
 
             return $this->index(new QuestionController());

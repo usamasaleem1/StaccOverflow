@@ -1,4 +1,4 @@
-# SOEN341
+# SOEN341 "StaccOverflow" Website
 [![Build Status](https://app.travis-ci.com/vimaguelo/SOEN341.svg?branch=main)](https://app.travis-ci.com/vimaguelo/SOEN341)
 
 ## About

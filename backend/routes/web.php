@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('home', ["questions" => (new \App\Http\Controllers\QuestionController())->all()]);
 });
 
+
+Route::get('/myprofile', function () {
+    return view("myprofile");
+})->name("myprofile")->middleware("auth");
+
+
 // Auth routes
 Route::get('/register', function () {
     return view("register");
