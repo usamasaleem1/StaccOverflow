@@ -1,5 +1,5 @@
 # SOEN341
-[![Build Status](https://app.travis-ci.com/usamasaleem1/SOEN341.svg?branch=main)](https://app.travis-ci.com/usamasaleem1/SOEN341)
+[![Build Status](https://app.travis-ci.com/vimaguelo/SOEN341.svg?branch=main)](https://app.travis-ci.com/vimaguelo/SOEN341)
 
 ## About
 Code reviews from people around the world is a great way to learn, share and improve your code and projects fast and seamlessly. Here, people can share their code, suggest changes, as well as upvote/downvote posts to gain more traction to solve popular problems software developers around the world face. itsafeaturenotabug will be this, a code sharing platform akin to StackOverflow to allow people to publish and share their code for problems and otherwise.
