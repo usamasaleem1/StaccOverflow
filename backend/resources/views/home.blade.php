@@ -66,8 +66,9 @@
                             <i class="ion-arrow-up-a gray"
                                onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::UPVOTE}})"></i>
                         @endif
+                        <i class="ion-total" style="text-align:center;">{{( $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::UPVOTE;})->count()) - $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::DOWNVOTE;})->count()  }}</i>
 
-                        <i class="ion-plus">{{ $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::UPVOTE;})->count()  }}</i>
+                        {{-- <i class="ion-plus">{{ $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::UPVOTE;})->count()  }}</i> --}}
                     </a>
 
                     <a class="down-vote">
@@ -79,8 +80,6 @@
                             <i class="ion-arrow-down-a gray"
                                onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::DOWNVOTE}})"></i>
                         @endif
-
-                        <i class="ion-minus">{{ $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::DOWNVOTE;})->count()  }}</i>
                     </a>
                     <div class="up-down-vote-value-wrapper"></div>
                 </div>
