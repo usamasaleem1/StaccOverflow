@@ -10,7 +10,7 @@
         <p style="text-align: right; margin-right: 30px; margin-bottom: 0px; margin-top: -30px; color: rgba(115, 181, 192, 1.0)">
             by <strong>
                 <a
-                    href="{{ url("search/author/" . $question->user_id) }}">
+                    href="{{ route("profile", ["id" => $question->user_id]) }}">
                     {{ $question->user->name  }}
                 </a>
             </strong>

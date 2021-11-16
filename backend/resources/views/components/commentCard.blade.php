@@ -15,7 +15,7 @@
         <p style="text-align: right; margin-right: 30px; margin-bottom: 20px; margin-top: -30px; color: rgba(115, 181, 192, 1.0)">
             by <strong>
                 <a
-                    href="{{ url("search/author/" . $comment->question->user_id) }}">
+                    href="{{ route("profile", ["id" => $comment->user->id]) }}">
                     {{ $comment->user->name  }}
                 </a>
             </strong>

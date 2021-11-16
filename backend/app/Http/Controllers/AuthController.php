@@ -71,16 +71,8 @@ class AuthController extends Controller
 
 
             // Backward compatibility
-            $name = $user->name;
-            if ($user->avatar == null) {
-                $user->avatar = "https://avatars.dicebear.com/api/avataaars/$name.svg";
-                $user->save();
-            }
+            $this->checkAvatarAndBio($user);
 
-            if ($user->bio == null) {
-                $user->bio = "Hi 👋 my name is $name";
-                $user->save();
-            }
             Auth::login($user);
 
             return $this->index(new QuestionController());
@@ -95,5 +87,23 @@ class AuthController extends Controller
         Auth::logout();
 
         return $this->index(new QuestionController());
+    }
+
+    public function checkAvatarAndBio(User $user)
+    {
+        $name = $user->name;
+        if ($user->avatar == null) {
+            $user->avatar = "https://avatars.dicebear.com/api/avataaars/$name.svg";
+            $user->save();
+        }
+
+        if ($user->bio == null) {
+            $user->bio = "Hi 👋 my name is $name";
+            $user->save();
+        }
+
+        if ($user->location == null) {
+            $user->location = request()->ip();
+        }
     }
 }
