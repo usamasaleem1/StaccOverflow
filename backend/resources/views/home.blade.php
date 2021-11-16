@@ -55,18 +55,18 @@
                     $votes = $question->questionVotes;
                     $userVote = $votes->firstWhere("user_id", Auth::id())
                 @endphp
-                <div class="up-down-vote" style="margin-left: 50px;margin-right: 30px;margin-top: -15px">
+                <div class="up-down-vote">
                     <a class="up-vote">
-
                         @if ($userVote != null && $userVote->type == \App\Models\QuestionVote::UPVOTE)
                             <i class="ion-arrow-up-a"
                                onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::NONE}})"></i>
-
                         @else
                             <i class="ion-arrow-up-a gray"
                                onclick="questionVote({{$question->id}}, {{\App\Models\QuestionVote::UPVOTE}})"></i>
                         @endif
-                        <i class="ion-total" style="text-align:center;">{{( $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::UPVOTE;})->count()) - $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::DOWNVOTE;})->count()  }}</i>
+                        <div class="card-container">
+                        <i class="ion-total" style=";">{{( $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::UPVOTE;})->count()) - $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::DOWNVOTE;})->count()  }}</i>
+                        </div>
 
                         {{-- <i class="ion-plus">{{ $votes->filter(function ($value) {return $value->type == \App\Models\QuestionVote::UPVOTE;})->count()  }}</i> --}}
                     </a>
