@@ -12,18 +12,24 @@ body {
 
 .up-vote .ion-arrow-up-a {
     position: absolute;
-    top: 60;
+    top: 64;
     left: 0;
     font-size: 35px;
     color: rgb(0, 119, 255);
+    margin-left: 46px;
+    margin-right: 30px;
+    margin-top: -15px;
 }
 
 .down-vote .ion-arrow-down-a {
     position: absolute;
-    bottom: 60;
+    bottom: 64;
     left: 0;
     font-size: 35px;
     color: rgb(214, 47, 83);
+    margin-left: 46px;
+    margin-right: 30px;
+    margin-top: -15px;
 }
 
 .gray {
@@ -33,10 +39,24 @@ body {
 .ion-plus {
     margin-top: 92px;
     margin-left: -13px;
-    color: black;
+    color: rgba(255, 255, 255, 0);
 }
 
 .ion-minus {
-    color: black;
+    color: rgba(0, 0, 0, 0);
     margin-left: 8px;
 }
+
+.ion-total {
+    position: relative;
+    top: 79;
+    left: 55;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.808);
+    margin-left: -6%;
+    padding-bottom: 50%;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+}
+
