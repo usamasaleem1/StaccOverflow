@@ -28,9 +28,9 @@ class AddingUserProfileData extends Migration
     public function down()
     {
         Schema::table("users", function (Blueprint $table) {
-            $table->dropColumn('avatar');
-            $table->dropColumn("location");
-            $table->dropColumn('bio');
+            $table->dropColumn('avatar', "location", 'bio');
+            //$table->dropColumn("location");
+            //$table->dropColumn('bio');
         });
     }
 }
